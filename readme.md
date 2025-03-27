@@ -30,7 +30,7 @@ I Implemented common functions, such listed below :
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/notes-api-springboot.git
+git clone https://<this-remote-url>.git
 cd notes-api-springboot
 ```
 ### 2. Create a .env File
