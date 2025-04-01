@@ -22,6 +22,14 @@ public class User {
 
     private String password;
 
+    @Column(nullable = false)
+    private String role; // Ex: USER atau ADMIN
+
+    @Column(length = 1000)
+    private String bio; // opsional
+
+    private String profileImageUrl; // path atau URL file
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Note> notes;
