@@ -52,13 +52,28 @@ public class UserController {
         return ResponseEntity.ok(profile);
     }
 
-    @PutMapping("/profile")
-    public ResponseEntity<String> updateBio(
-            @AuthenticationPrincipal User user,
-            @RequestBody Map<String, String> body) {
 
-        user.setBio(body.get("bio"));
+    @PatchMapping("/profile")
+    public ResponseEntity<?> patchUserProfile(
+            @AuthenticationPrincipal User user,
+            @RequestBody Map<String, Object> updates) {
+
+        // Cek dan update username
+        if (updates.containsKey("username")) {
+            user.setUsername((String) updates.get("username"));
+        }
+
+        // Cek dan update bio
+        if (updates.containsKey("bio")) {
+            user.setBio((String) updates.get("bio"));
+        }
+
+        // Bisa ditambah field lain di sini
+        // if (updates.containsKey("email")) { ... }
+
         userRepository.save(user);
-        return ResponseEntity.ok("Bio updated!");
+
+        return ResponseEntity.ok("Profile updated successfully!");
     }
+
 }
