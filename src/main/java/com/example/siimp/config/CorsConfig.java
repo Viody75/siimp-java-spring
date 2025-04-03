@@ -14,8 +14,9 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000", "https://<your-frontend-url>.com") // URL Client Origin, Use "*" for Wildcard or Mobile app origin
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedOrigins("https://<frontend-url>.com") // Baik implementasi dengan .env
+                        .allowedOriginPatterns("http://localhost:*", "http://127.0.0.1:*") // For Dev Usecases
+                        .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
