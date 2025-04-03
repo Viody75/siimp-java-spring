@@ -13,8 +13,8 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    Dotenv dotenv = Dotenv.load();
-    String jwtSecret = dotenv.get("JWT_SECRET");
+//    Dotenv dotenv = Dotenv.load();
+    String jwtSecret = System.getenv("JWT_SECRET");
 
     private final String SECRET = jwtSecret; // HARUS 256-bit (32 chars)
 
