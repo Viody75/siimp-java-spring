@@ -40,6 +40,7 @@ cd notes-api-springboot
 ```
 ### 2. Create a .env File
 Just set it up like the .env.example !?
+If wanna use PostgreSql, Switch the value of the db from env to jdbc:postgresql://<db-connection> and uncomment the .properties for postgre
 
 ### 3. Run the App
 ```bash
