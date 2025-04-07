@@ -10,11 +10,11 @@ This project is part of the **SIIMP Series** — aiming to give a practical, rea
 - 🔐 User Registration & Login (JWT Auth)
 - 📝 Full CRUD operations for Notes
 - 🔍 Pagination and Keyword Search
-- 🛡️ Role-based Access (User vs Admin)
-- 👤 User Profile Management (bio & profile picture)
+- 🛡️ Role-based Access (User, Admin)
+- 👤 User Profile Management (implement profile picture i/o)
 - 📂 File Upload & Static File Access
 - 🔧 Environment-based configuration with `.env`
-- 💾 MySQL or H2 Database Support
+- 💾 SQL or H2 Database Support
 
 ---
 
@@ -23,9 +23,9 @@ This project is part of the **SIIMP Series** — aiming to give a practical, rea
 - Java 17
 - Spring Boot 3.x
 - Spring Security + JPA
-- MySQL / H2
+- MySQL / PostgreSQL / H2 (memory db)
 - JWT (JSON Web Token)
-- Lombok
+- Lombok (Boilerplate)
 - `java-dotenv` (env variable loader)
 
 ---
