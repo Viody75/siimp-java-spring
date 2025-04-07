@@ -1,9 +1,7 @@
 package com.example.siimp.model;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.List;
 
 @Entity
